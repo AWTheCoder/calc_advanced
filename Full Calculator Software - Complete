@@ -344,13 +344,12 @@ def indices():
     time.sleep(1)
     choices()
 
-def perimeter(width,length):
-    return (2*width) + (2*length)
-    print("""========================
-    ╔═╗┌─┐┬─┐┬┌┬┐┌─┐┌┬┐┌─┐┬─┐
-    ╠═╝├┤ ├┬┘││││├┤  │ ├┤ ├┬┘
-    ╩  └─┘┴└─┴┴ ┴└─┘ ┴ └─┘┴└─
-    ========================""")
+def perimeter():
+    print("""    ========================
+    ┌─┐┌─┐┬─┐┬┌┬┐┌─┐┌┬┐┌─┐┬─┐
+    ├─┘├┤ ├┬┘││││├┤  │ ├┤ ├┬┘
+    ┴  └─┘┴└─┴┴ ┴└─┘ ┴ └─┘┴└─
+    ==========================""")
     while True:
         try:
             width = float(input("Enter the width of your rectangle/square: "))
@@ -358,13 +357,15 @@ def perimeter(width,length):
             if width < 1 or length < 1:
                 print("Must be positive")
                 continue
-            print("The perimeter is", perimeter(width,length))
+            per = (2 * width) + (2 * length)
+            print("The perimeter is", per, "\n")
             break
         except ValueError:
             print("Enter a valid number")
-
-def area_and_circumference(diameter):
-    print("""=============================================================
+    time.sleep(1)
+    choices()
+def area_and_circumference():
+    print("""=======================================================
        ┌─┐┬─┐┌─┐┌─┐  ┌─┐┌┐┌┌┬┐  ┌─┐┬┬─┐┌─┐┬ ┬┌┬┐┌─┐┌─┐┬─┐┌─┐┌┐┌┌─┐┌─┐
        ├─┤├┬┘├┤ ├─┤  ├─┤│││ ││  │  │├┬┘│  │ ││││├┤ ├┤ ├┬┘├┤ ││││  ├┤ 
        ┴ ┴┴└─└─┘┴ ┴  ┴ ┴┘└┘─┴┘  └─┘┴┴└─└─┘└─┘┴ ┴└  └─┘┴└─└─┘┘└┘└─┘└─┘
@@ -373,13 +374,16 @@ def area_and_circumference(diameter):
         diameter = float(input("Enter the diameter of the circle: "))
         if diameter <= 0:
             print("Must be positive")
+        else:
             radius = diameter / 2
             circumference = diameter * 3.14
-            area_calc = (radius * radius * 3.14)
-            return area, circumference
-            print("The area of your circle is", area_calc)
-            print("The circumference of your circle is", circ_calc)
+            area = (radius * radius * 3.14)
+
+            print("The area of your circle is", area)
+            print("The circumference of your circle is", circumference, "\n")
+
     except ValueError:
             print("Enter a valid number")
-
+    time.sleep(1)
+    choices()
 menu()
