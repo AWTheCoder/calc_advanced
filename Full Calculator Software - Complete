@@ -1,1 +1,385 @@
+import random
+import time
 
+def menu():
+    time.sleep(1)
+    print("""
+    ╔═╗┌─┐┬  ┌─┐┬ ┬┬  ┌─┐┌┬┐┌─┐┬─┐
+    ║  ├─┤│  │  │ ││  ├─┤ │ │ │├┬┘
+    ╚═╝┴ ┴┴─┘└─┘└─┘┴─┘┴ ┴ ┴ └─┘┴└─
+    """)
+    time.sleep(0.5)
+    print("    1) Addition")
+    time.sleep(0.5)
+    print("    2) Subtraction")
+    time.sleep(0.5)
+    print("    3) Division")
+    time.sleep(0.5)
+    print("    4) Multiplication")
+    time.sleep(0.5)
+    print("    5) Random Number Generator") #AW
+    time.sleep(0.5)
+    print("    6) Trigonometric Values") #AW
+    time.sleep(0.5)
+    print("    7) Area & Circumference") #Jamian
+    time.sleep(0.5)
+    print("    8) Perimeter") #Jamian
+    time.sleep(0.5)
+    print("    9) Indices")  # AW
+    time.sleep(0.5)
+    print("    10) Modulus")  # AW
+    time.sleep(0.5)
+    print("    11) Remainder")  # AW
+    time.sleep(0.5)
+    choices()
+    print("""
+       ----------------------------------------------------------------""")
+    time.sleep(1)
+    return
+
+def choices():
+    time.sleep(0.5)
+    option = int(input("    Enter the number of the operation you wish to perform: "))
+    while option < 1 or option > 11:
+        time.sleep(0.5)
+        print("    Incorrect input, try again")
+        time.sleep(0.5)
+        option = int(input("    Enter the number of the operation you wish to perform: "))
+    if option == 1:
+        add()
+    elif option == 2:
+        subtract()
+    elif option == 3:
+        divide()
+    elif option == 4:
+        multiply()
+    elif option == 5:
+        rand_num()
+    elif option == 6:
+        trigonometry()
+    elif option == 7:
+        area_and_circumference()
+    elif option == 8:
+        perimeter()
+    elif option == 9:
+        indices()
+    elif option == 10:
+        modulus()
+    elif option == 11:
+        remainder()
+
+
+def add():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    print("""
+    ╔═╗┌┬┐┌┬┐┬┌┬┐┬┌─┐┌┐┌
+    ╠═╣ ││ │││ │ ││ ││││
+    ╩ ╩─┴┘─┴┘┴ ┴ ┴└─┘┘└┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    total = (num1+num2)
+    time.sleep(0.5)
+    print(f"    {num1} + {num2} is {total}")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def subtract():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("""
+    ╔═╗┬ ┬┌┐┌┬┐┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
+    ╚═╗│ │├┴┐│ ├┬┘├─┤│   │ ││ ││││
+    ╚═╝└─┘└─┘┴ ┴└─┴ ┴└─┘ ┴ ┴└─┘┘└┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    total = (num1-num2)
+    time.sleep(0.5)
+    print(f"    {num1} - {num2} is {total}")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def divide():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("""
+    ╔╦╗ ┬ ┬  ┬ ┬ ┌─┐ ┬ ┌─┐┌┐┌
+     ║║ │ └┐┌┘ │ └─┐ │ │ ││││
+    ═╩╝ ┴  └┘  ┴ └─┘ ┴ └─┘┘└┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    total = (num1/num2)
+    time.sleep(0.5)
+    print(f"    {num1} / {num2} is {total}")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def multiply():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("""
+    ╔╦╗┬ ┬┬ ┌┬┐┬┌─┐┬  ┬┌─┐┌─┐┌┬┐┬┌─┐┌┐┌
+    ║║║│ ││  │ │├─┘│  ││  ├─┤ │ ││ ││││
+    ╩ ╩└─┘┴─┘┴ ┴┴  ┴─┘┴└─┘┴ ┴ ┴ ┴└─┘┘└┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    total = (num1*num2)
+    time.sleep(0.5)
+    print(f"    {num1} * {num2} is {total}")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def trigonometry():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("""
+    ╔╦╗┬─┐┬┌─┐┌─┐┌┐┌┌─┐┌┬┐┌─┐┌┬┐┬─┐┬ ┬
+     ║ ├┬┘││ ┬│ │││││ ││││├┤  │ ├┬┘└┬┘
+     ╩ ┴└─┴└─┘└─┘┘└┘└─┘┴ ┴└─┘ ┴ ┴└─ ┴ 
+    """)
+    time.sleep(1)
+    print("    Enter either sin, cos or tan: ")
+    trig = input().lower()
+    if trig == "sin":
+        sin()
+    elif trig == "cos":
+        cos()
+    elif trig == "tan":
+        tan()
+
+def sin():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("    Enter 0, 30, 45, 60, 90: ")
+    sin_num = int(input())
+    if sin_num == 0:
+        time.sleep(0.5)
+        print("    sin(0) = 0")
+    elif sin_num == 30:
+        time.sleep(0.5)
+        print("    sin(30) = 0.5")
+    elif sin_num == 45:
+        time.sleep(0.5)
+        print("    sin(45) = 1/√2")
+    elif sin_num == 60:
+        time.sleep(0.5)
+        print("    sin(60) = √3/2")
+    elif sin_num == 90:
+        time.sleep(0.5)
+        print("    sin(90) = 1")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def cos():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("    Enter 0, 30, 45, 60, 90: ")
+    cos_num = int(input())
+    if cos_num == 0 :
+        time.sleep(0.5)
+        print("    cos(0) = 1")
+    elif cos_num == 30 :
+        time.sleep(0.5)
+        print("    cos(30) = √3/2")
+    elif cos_num == 45 :
+        time.sleep(0.5)
+        print("    cos(0) = 1/√2")
+    elif cos_num == 60 :
+        time.sleep(0.5)
+        print("    cos(0) = 1/2")
+    elif cos_num == 90 :
+        time.sleep(0.5)
+        print("    cos(0) = 0")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def tan():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("    Enter 0, 30, 45, 60, 90: ")
+    tan_num = int(input())
+    if tan_num == 0 :
+        time.sleep(0.5)
+        print("    tan(0) = 0")
+    elif tan_num == 30 :
+        time.sleep(0.5)
+        print("    tan(30) = 1/√3")
+    elif tan_num == 45 :
+        time.sleep(0.5)
+        print("    tan(45) = 1")
+    elif tan_num == 60 :
+        time.sleep(0.5)
+        print("    tan(60) = √3")
+    elif tan_num == 90 :
+        time.sleep(0.5)
+        print("    tan(90) = undefined")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def rand_num():
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(0.5)
+    print("""
+    ╦═╗┌─┐┌┐┌┌┬┐┌─┐┌┬┐  ╔╗╔┬ ┬┌┬┐┌┐ ┌─┐┬─┐  ╔═╗┌─┐┌┐┌┌─┐┬─┐┌─┐┌┬┐┌─┐┬─┐
+    ╠╦╝├─┤│││ │││ ││││  ║║║│ ││││├┴┐├┤ ├┬┘  ║ ╦├┤ │││├┤ ├┬┘├─┤ │ │ │├┬┘
+    ╩╚═┴ ┴┘└┘─┴┘└─┘┴ ┴  ╝╚╝└─┘┴ ┴└─┘└─┘┴└─  ╚═╝└─┘┘└┘└─┘┴└─┴ ┴ ┴ └─┘┴└─
+    """)
+    time.sleep(0.5)
+    total = 1
+    rand = random.randint(1,10)
+    num = int(input("    I'm thinking of a number between 1 and 10 - guess it: "))
+    while num != rand:
+        total = total + 1
+        if num < rand:
+            time.sleep(0.5)
+            print("    Too low")
+        elif num > rand:
+            time.sleep(0.5)
+            print("    Too high")
+        time.sleep(0.5)
+        num = int(input("    I'm thinking of a number between 1 and 10 - guess it: "))
+    if num  == rand:
+        time.sleep(1)
+        print(f"    Correct. You took {total} tries")
+    time.sleep(1)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def modulus():
+    print("""
+    ----------------------------------------------------------------""")
+    print("""
+    ╔╦╗┌─┐┌┬┐┬ ┬┬  ┬ ┬┌─┐
+    ║║║│ │ │││ ││  │ │└─┐
+    ╩ ╩└─┘─┴┘└─┘┴─┘└─┘└─┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    mod = num1 % num2
+    time.sleep(0.5)
+    print(f"    {num1} % {num2} is {mod}")
+    time.sleep(0.5)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def remainder():
+    print("""
+    ----------------------------------------------------------------""")
+    print("""
+    ╦═╗┌─┐┌┬┐┌─┐┬┌┐┌┌┬┐┌─┐┬─┐
+    ╠╦╝├┤ │││├─┤││││ ││├┤ ├┬┘
+    ╩╚═└─┘┴ ┴┴ ┴┴┘└┘─┴┘└─┘┴└─
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    remainder = num1 // num2
+    time.sleep(0.5)
+    print(f"    {num1} // {num2} is {remainder}")
+    time.sleep(0.5)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def indices():
+    print("""
+    ----------------------------------------------------------------""")
+    print("""
+    ╦┌┐┌┌┬┐┬┌─┐┌─┐┌─┐
+    ║│││ ││││  ├┤ └─┐
+    ╩┘└┘─┴┘┴└─┘└─┘└─┘
+    """)
+    num1 = int(input("    Enter a number: "))
+    time.sleep(0.5)
+    num2 = int(input("    Enter another number: "))
+    indices = num1 ** num2
+    print(f"    {num1} ^ {num2} is {indices}")
+    time.sleep(0.5)
+    print("""
+    ----------------------------------------------------------------""")
+    time.sleep(1)
+    choices()
+
+def perimeter(width,length):
+    return (2*width) + (2*length)
+    print("""========================
+    ╔═╗┌─┐┬─┐┬┌┬┐┌─┐┌┬┐┌─┐┬─┐
+    ╠═╝├┤ ├┬┘││││├┤  │ ├┤ ├┬┘
+    ╩  └─┘┴└─┴┴ ┴└─┘ ┴ └─┘┴└─
+    ========================""")
+    while True:
+        try:
+            width = float(input("Enter the width of your rectangle/square: "))
+            length = float(input("Enter the length of your rectangle/square: "))
+            if width < 1 or length < 1:
+                print("Must be positive")
+                continue
+            print("The perimeter is", perimeter(width,length))
+            break
+        except ValueError:
+            print("Enter a valid number")
+
+def area_and_circumference(diameter):
+    print("""=============================================================
+       ┌─┐┬─┐┌─┐┌─┐  ┌─┐┌┐┌┌┬┐  ┌─┐┬┬─┐┌─┐┬ ┬┌┬┐┌─┐┌─┐┬─┐┌─┐┌┐┌┌─┐┌─┐
+       ├─┤├┬┘├┤ ├─┤  ├─┤│││ ││  │  │├┬┘│  │ ││││├┤ ├┤ ├┬┘├┤ ││││  ├┤ 
+       ┴ ┴┴└─└─┘┴ ┴  ┴ ┴┘└┘─┴┘  └─┘┴┴└─└─┘└─┘┴ ┴└  └─┘┴└─└─┘┘└┘└─┘└─┘
+       =============================================================""")
+    try:
+        diameter = float(input("Enter the diameter of the circle: "))
+        if diameter <= 0:
+            print("Must be positive")
+            radius = diameter / 2
+            circumference = diameter * 3.14
+            area_calc = (radius * radius * 3.14)
+            return area, circumference
+            print("The area of your circle is", area_calc)
+            print("The circumference of your circle is", circ_calc)
+    except ValueError:
+            print("Enter a valid number")
+
+menu()
